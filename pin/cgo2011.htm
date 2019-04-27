@@ -1,0 +1,172 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+  <title>CGO 2011 Tutorial - Call for Participation</title>
+  <link href="http://cgo.org/cgo2011/pin/webpage_files/main.css" type="text/css" rel="STYLESHEET">
+  <link href="http://www.pintool.org/tutorials/isca08/favicon.ico" rel="shortcut icon">
+  <meta name="keywords" content="Pin CGO 2011 Tutorial Robert Cohn Tevi Devor dynamic binary optimization instrumentation trace generation computer architecture Intel">
+</head><body background="webpage_files/pins-small.png"><center>
+
+
+<!--START CONTENT-->
+
+<table width="80%" bgcolor="steelblue" border="0" cellpadding="0" cellspacing="10"> <tbody><tr><td>
+<table bgcolor="black" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+<table bgcolor="white" border="0" cellpadding="10" cellspacing="10">
+  <tbody><tr align="left">
+    <td colspan="3" bgcolor="steelblue" height="37" valign="middle">
+	<font color="white" size="+2"><b>Detailed Pin!</b><br>Binary Instrumentation Engine</font>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+    <td width="130" bgcolor="white" valign="top">
+      <table cellpadding="0" cellspacing="2">
+        <tbody><tr><td width="120">
+            <a href="http://www.cgo.org/cgo2011/"> CGO 2011</a>
+        </td> </tr>
+        <tr><td width="120">
+            <a href="http://www.cgo.org/cgo2011/"><img src="webpage_files/l-pin.gif" alt="Pin Website" border="0"></a>
+        </td> </tr>
+        <tr><td width="120">
+            <a href="cgo2011.htm#schedule"><img src="webpage_files/l-schedule.gif" alt="Tutorial Schedule" border="0"></a>
+        </td> </tr>
+        <tr><td width="120">
+            <a href="cgo2011.htm#bios"><img src="webpage_files/l-bios.gif" alt="Speaker Bios" border="0"></a>
+        </td> </tr>
+        <tr><td width="120">
+            <a href=""><img src="webpage_files/l-slides.gif" alt="Presentation Slides" border="0"></a>
+        </td> </tr>
+      </tbody></table>
+    </td>
+    <td class="bluesubheader" width="100%" align="center">
+        Call for Participation!<br>
+        CGO 2011 Tutorial<br>
+        April  2011<br>
+        Chamonix, France<br>
+    </td>
+    <td bgcolor="white" valign="top">
+        <img src="webpage_files/pin.PNG" alt="" border="0">
+    </td>
+  </tr>
+  <tr><td colspan="3">
+  
+<!-- MAIN TEXT -->
+
+<h3>About Pin<a name="about"><font color="white">.</font></a></h3>
+<p class="blacktext"> 
+Pin is a dynamic instrumentation system provided by Intel (http://www.pintool.org),
+which allows C/C++ introspection code to be injected at arbitrary places in a running executable. The
+injected introspection code is referred to as a Pin tool and is used to observe the behavior of the program. 
+Pin tools can be writtten to perform various functionalities including application profiling, memory leak detection, trace generators for the IA32,
+Intel64 and IA64 (Itanium) platforms, running either Windows or Linux. Pin provides a rich API that abstracts away the underlying
+instruction set idiosyncrasies and allows context information such as register contents to be passed to the
+injected code as parameters. Pin automatically saves and restores registers that are overwritten by the
+injected code so the application continues to execute normally. Pin makes it easy to do studies on
+complex real-life applications, which makes it a useful tool not only for research, but also for education.
+Pin has been downloaded tens of thousands times, has been cited in over 700 publications, and has over 550 registered
+mailing list users.
+</p>
+
+<h3>Tutorial Objective <a name="objective"><font color="white">.</font></a></h3>
+<p class="blacktext"> 
+The tutorial targets researchers, students, and educators alike, and provides a detailed look at Pin, both
+how to use Pin and how Pin works. Participants will obtain a good undersanding of the Pin API ans.
+The tutorial is comprised of four learning components. The first
+component provides insight into the workings of Pin, and introduces its fundamental
+instrumentation structures and concepts thru example Pin tools. The second component will present methods and considerations 
+for writing optimal Pintools. The third component introduces useful Pin-based tools that are
+freely available for download, in particular we will look in detail at the memtrace and membuffer tools,
+which implement the instrumentation basis for algorithms which need to examine memory accesses. The fourth component will 
+present some of the more advanced Pin APIs, such as signal/exception interception, multi threaded pin tools, Pin interface to debuggers. 
+</p>
+
+<hr color="steelblue">
+<h3>Tutorial Schedule <a name="schedule"><font color="white">.</font></a></h3>
+Overall 4.5 hours
+<p class="bluebold"> 
+Part One: Overview, Key Concepts (60 min) 
+</p>
+
+<p class="blacktext"> 
+The first part of the tutorial provides an introduction to Pin and its basic API for writing instrumentation
+tools (Pintools). Simple Pintools are used to motivate and explain Pin's just-in-time and ahead-of-time
+instrumentation features. In addition, we will familiarize the attendees with the various components that
+make up a distributed Pin kit.
+</p>
+
+<p class="bluebold"> 
+Part Two: Pintools in Detail  (50 min) 
+</p>
+
+<p class="blacktext"> 
+Dos and Don'ts of Pin tool writing. Methods and considerations for writing optimal Pintools. Description of some larger Pin tools. 
+</p>
+
+
+<p class="bluebold"> 
+Part Three: Pintools in More Detail  (60 min) 
+</p>
+
+<p class="blacktext"> 
+Pin's largest value comes from its utility in the research community. The tutorial highlights concepts that
+appeal to language and compiler researchers: memory leak detectors, race condition detectors, and
+profilers. We will wlakthru the memtrace and membuffer tools. We will include concepts that will appeal to 
+computer architecture researchers: cache simulation, branch prediction, multi-core simulation. Finally, we 
+include concepts that will appeal to operating systems researchers: multi-process simulation, system call emulation.
+</p>
+
+
+
+<p class="bluebold"> 
+Part Four: Advanced Pin Usage: Advanced Pin APIs (60 min)
+</p>
+
+<p class="blacktext"> 
+We will present some of the more advanced Pin APIs, and show examples of their usage. Some examples of 
+these are: signal/exception interception, instruction re-writing, multi threaded pin tools, interfacing to debuggers, controlling the Pin
+code cache.
+</p>
+
+
+
+<p class="bluebold"> 
+Part Five: Pin Performance (15 min)
+</p>
+
+<p class="blacktext"> 
+We will present some performance numbers of applications running on Pin with various Pin tools
+</p>
+
+
+
+<hr color="steelblue">
+<h3>Presenter Bios <a name="bios"><font color="white">.</font></a></h3>
+<table cellspacing="10">
+<tbody><tr> <td>
+<p class="blacktext"> 
+<b>Tevi Devor</b> 
+is a Staff Engineer at Intel and has been working in the Pin project for the last 6 years.
+Most recently before this, he worked on ia-32el, Intel's dynamic binary translator used for
+running IA32 applications on IA64 (Itanium) platforms. Tevi received an M.Sc from Queens 
+University, Kignston Canada in 1985, and a B.Sc from University of Toronto in 1984.
+</p>
+</td></tr>
+
+<tr> <td>
+<p class="blacktext"> 
+<b>Robert Cohn</b> 
+is a Senior Principal Engineer at Intel and is the original developer of Pin. Previously, he was a 
+developer of Spike, a post-link optimizer for the Itanium and Alpha processors. He also added 
+profile-guided optimization to Digital's C compiler for Alpha. Robert received a Ph.D. from Carnegie
+Mellon in 1992.
+</p>
+</td></tr>
+
+  
+ 
+</tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table></center></body></html>
+ 

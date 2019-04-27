@@ -1,0 +1,314 @@
+body{
+    background: #ffffff;
+    margin: 0px;
+    padding: 0px;
+}
+
+span.warning{
+    color: red;
+    font-weight: bold;
+}
+
+span.warning{
+    color: red;
+    font-weight: bold;
+}
+
+div.container{
+    posisition: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    align: center;
+}
+
+div.text{
+    float: right;
+    position: absolute;
+    top: 0px;
+    left: 170px;
+    background: #ffffff;
+    height: 100%;
+    text-align: justify;
+    padding-right: 50px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 10pt;
+    width: 900px;
+}
+
+div.text h1, h2{
+    color: #D6383E;
+}
+
+div.text h3.indented {
+    text-indent: 30pt;
+}
+
+div.text a{
+#    color: #330000;
+#    font-weight: bold;
+}
+
+div.text td{
+    font-family: inherit;
+    font-size: inherit;
+}
+
+div.text li{
+	margin: 1em 0;
+}
+
+div.menu{
+    float: left;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    margin-left: 0px;
+    padding-left: 0px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+div.menu a{
+    display: block;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    color: #990000;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;   
+}
+
+#program {
+    width: 800px;
+}
+div.chair {
+    text-align:right;
+}
+#program tr.day td {
+    text-align: center;
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: bold;   
+    padding-top: 25px;
+}
+#program tr.event td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;
+    background-color: #CCCCFF;
+    color: black;
+    border-bottom: 2px solid white;
+}
+#program tr.break td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;
+    background-color: #CCCCCC;
+    color: black;
+    border-bottom: 2px solid white;
+}
+
+#program tr.paper td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;
+    background-color: #CCCCFF;
+    color: black
+}
+#program tr.author td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 12px;
+    font-family: inherit;
+    font-style:italic;
+    background-color: #CCCCFF;
+    color: black;
+    border-bottom: 2px solid white;
+}
+#program tr.authork td {
+    padding-left: 87px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 12px;
+    font-family: inherit;
+    font-style:italic;
+    background-color: #CCCCFF;
+    color: black;
+    border-bottom: 2px solid white;
+}
+#program tr.chair td {
+    padding-left: 87px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 12px;
+    font-family: inherit;
+    font-style:italic;
+    background-color: black;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+
+
+#program tr.session td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;
+    background-color: #330000;
+    color: white;
+}
+
+
+#program tr.stime td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;   
+    background-color: black;
+    color: white
+}
+#program tr.ftime td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;   
+    background-color: red;
+    color: white;
+}
+#program tr.rtime td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;   
+    background-color: pink;
+}
+#program tr.ktitle td {
+    padding-left: 25px;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;   
+}
+#program tr.ptitle td {
+    padding-left: 25px;
+    font-size: 14px;
+    font-family: inherit;
+}
+#program tr.authors td {
+    padding-bottom: 10px;
+    padding-left: 50px;
+    font-style: italic;
+    font-size: 12px;
+    font-family: inherit;
+}
+
+#schedule th {
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+#schedule th.space {
+  background-color: white;
+}
+
+
+#schedule td {
+        width: 125px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-align: center;
+}
+
+#schedule td.workshop {
+  background-color: #ffcccc;
+}
+
+#schedule td.tutorial {
+  background-color: #ccffcc;
+}
+
+#schedule td.time { 
+        width: 90px;
+	text-align: right;
+	background-color: red;
+	color: white;
+        padding-right:10px;
+}
+
+#LocalInfoHeader td {
+	border: 0;
+	background-color: pink;
+	text-align: center;
+}
+
+div.menu a.TODO {
+	color: #AAAAAA;
+ 
+}
+
+table.social {
+    font-size: 10pt;
+}
+
+tr.social {
+    font-size: 10pt;
+}
+
+td.social {
+    font-size: 10pt;
+}
+
+
+
+div.menu a.DONE {
+#	color: #996666;
+#  font-weight: normal;
+#  text-decoration: line-through;   
+}

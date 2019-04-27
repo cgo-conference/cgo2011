@@ -1,0 +1,245 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Keynote Speakers at the 2011 International Symposium on Code Generation and Optimization</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="http://www.cgo.org/cgo2011/logo.ico" />
+</head>
+<body>
+<div class="container">
+<div class="text">
+<img src="images/cgo-header.jpg">
+<!-- <hr color=black> -->
+
+<h1>Keynotes</h1>
+
+<h2>The Language, Optimizer, and Tools Mess</h2>
+
+  <b>Erik Altman, IBM</b><br><br>
+
+  <a href="Erik_Altman.pdf"><b>Slides</b></a>
+
+<p>For many years, new languages promised higher performance in addition to other desirable 
+characteristics such as higher productivity, better static checking, better reusability and 
+composability, etc.  However, in practice, virtually no new languages win in performance 
+over historic languages like C and Fortran. Why?  Higher level semantics were supposed to 
+provide additional information so that optimizers could perform better analyses and so that 
+conservative analyses could be less conservative.</p>
+
+<p>In practice, a number of factors have conspired against this vision.
+For example, the number of degrees of freedom offered by new languages appears to have 
+increased faster than their abstraction level, thus obfuscating intent and hindering 
+analysis. Higher abstraction levels have implicitly encouraged inefficient memory use.  The 
+large size of programs enabled by modern languages makes reasoning about them more difficult, 
+especially since many of our analyses are nonlinear, a problem whether optimizations are 
+static or dynamic.  The large size of programs and the pairing of code from multiple libraries 
+and frameworks also makes it more challenging for developers to test their code in realistic 
+deployment scenarios.</p>
+ 
+<p>This talk will offer some musings about these challenges and some ways we might address them.</p>
+
+<p><b>Erik Altman</b> has been with IBM Research for more than 15 years, and has served as a Research 
+Staff Member and as Technical Assistant to the Vice-President for Systems.  He currently manages 
+the Dynamic Optimization Group at the IBM T.J. Watson Research Center.  His research has focused 
+on compilers, architecture and microarchitecture, and most recently performance tools for enterprise 
+software and enabling heterogeneous systems.  He has authored or co-authored more than 30 conference 
+and journal papers, and has more than 25 patents and pending patent applications.  He was one of 
+the originators of IBM's DAISY binary translation project that has great impact on both industry 
+and academia.  He was also one of the original architects of the Cell processor chip that is 
+deployed in the Sony PlayStation 3 game consoles.  He is currently the Editor-in-Chief of IEEE Micro 
+and the Chair of ACM (Association for Computing Machinery) SIGMICRO (Special Interest Group on 
+Microarchitecture). He has been the program co-chair and general chair of PACT (International 
+Conference on Parallel Architecture and Compilation Techniques).  He has also served as program 
+chair for CASES (International Conference on Compilers, Architecture, and Synthesis for Embedded 
+Systems), and is currently program co-chair for NPC'2011(Network and Parallel Computing).  He 
+co-founded the Workshop on Binary Translation and has served on numerous program committees in 
+leading research conferences.</p>
+<p>He has also served as guest editor of IEEE Computer, the ACM Journal of Instruction Level 
+Parallelism (JILP),and the IBM Journal of Research and Development.  He received his PhD from 
+McGill University in 1995.</p> 
+
+<hr>
+
+<h2>Formally Verifying a Compiler: Why? How? How Far?</h2>
+
+<b>Xavier Leroy, INRIA</b><br><br>
+
+<a href="Xavier_Leroy.pdf"><b>Slides</b></a>
+
+<p>Given the complexity and sophistication of code generation and
+optimization algorithms, and the difficulty of systematically testing
+a compiler, it is unsurprising that bugs occur in compilers and
+cause miscompilation: incorrect executable code is silently generated
+from a correct source program. The formal verification of
+a compiler is a radical solution to the miscompilation issue. By
+applying formal methods (program proof) to the compiler itself,
+compiler verification proves, with mathematical certainty, that the
+generated executable code behaves exactly as prescribed by the semantics
+of the source program.</p>
+
+<p><b>Why indulge in compiler verification?</b> Miscompilation bugs are
+uncommon enough that, for ordinary, non-critical software, they
+are negligible compared with the bugs already present in the source
+program. This is no longer true, however, for critical software, as
+found in aircraft, medical equipment or nuclear plants, for example.
+There, miscompilation is a concern, which is currently addressed
+in unsatisfactory ways such as turning all optimizations off. The
+risk of miscompilation also diminishes the usefulness of formal
+methods (model checking, static analysis, program proof) applied
+at the source level: the guarantees so painfully obtained by sourcelevel
+verification may not extend to the compiled code that actually
+runs.</p>
+
+<p><b>How to verify a compiler?</b> For every pass, there is a choice
+between 1- proving its implementation correct once and for all,
+and 2- leaving the implementation untrusted, but at each run feed
+its input and output into a validator: a separate algorithm that
+tries to establish semantic preservation between input and output
+code, and aborts compilation (or turns the optimization off) if it
+cannot. If the soundness of the validator is proved once and for all,
+approach 2 provides soundness guarantees as strong as approach 1,
+often at reduced proof costs. I will illustrate both approaches on the
+verification of two compilation passes: register allocation by graph
+coloring, and software pipelining.</p>
+
+<p><b>How far can compiler verification go?</b> The state of the art is the
+CompCert compiler, which compiles almost all of the C language
+to PowerPC, ARM and x86 assembly and has been mechanically
+verified using the Coq proof assistant. From a compiler standpoint,
+however, CompCert leaves much room for improvement: the
+compilation technology used is early 1980.s, few optimizations are
+implemented, and the performance of the compiled code barely
+matches that of gcc -O1. Much future work remains, in particular
+on loop optimizations, which raise semantic challenges that call
+for principled solutions.
+
+
+<p><b>Xavier Leroy</b> is a senior research scientist at INRIA near Paris,
+where he leads the Gallium research team. He received his PhD
+from University of Paris 7 in 1992. His work focuses on programming
+languages and systems and their interface with the formal
+verification of software for safety and security. He is the architect
+and lead author of the Objective Caml functional programming language
+and of its implementation. He has published about 50 research
+papers, and received the 2007 Monpetit prize of the French
+Academy of sciences.</p>
+
+<!--
+<h2>Performance is Dead, Long Live Performance!</h2>
+
+<p>In a world of social networking, security attacks, and hot mobile phones,
+the importance of application performance appears to have diminished. My own
+research agenda has shifted from looking at the performance of memory
+allocation to building runtime systems that are more resilient to data
+corruption and security attacks. In my talk, I will outline a number of areas
+where code-generation and runtime techniques can be successfully applied to
+areas for purposes other than performance, such as fault tolerance,
+reliability, and security. Along the way, I will consider such questions as
+"Does it really matter if this corruption was caused by a software or hardware
+error?" and "Is it okay to let a malicious person allocate arbitrary data on my
+heap?".</p>
+
+<p>Despite these other opportunities, the importance of performance in modern
+applications remains undiminished, and current hardware trends place an
+increasing burden on software to provide needed performance boosts. In
+concluding, I will suggest several important trends that I believe will help
+define the next 10 years of code generation and optimization research.  </p>
+
+<p>Here are the keynote slides in 
+<a href="talks/CGO2010-keynote-BenZorn.pdf">PDF</a> and
+<a href="talks/CGO2010-keynote-BenZorn.ppt">PPT</a> format.</p>
+
+<img src="images/zorn.jpg" align=left>
+<p><b>Ben Zorn</b> is a Principal Researcher at Microsoft Research. After
+receiving a PhD in Computer Science from UC Berkeley in 1989, he served eight
+years on the Computer Science faculty at the University of Colorado in Boulder,
+receiving tenure and being promoted to Associate Professor in 1996. He left the
+University of Colorado in 1998 to join Microsoft Research, where he currently
+works. Ben's research interests include programming language design and
+implementation and performance measurement and analysis. He has served as an
+Associate Editor of the ACM journals Transactions on Programming Languages and
+Systems and Transactions on Architecture and Code Optimization and he currently
+serves as a Member-at-Large of the SIGPLAN Executive Committee. For more
+information, visit his web page at <a
+href="http://research.microsoft.com/~zorn/">http://research.microsoft.com/~zorn/</a>.</p>
+
+<br><br><br>
+<hr color=black>
+
+<h2>There Are At Least Two Sides to Every Heterogeneous System</h2>
+
+<p>Since there are at least two sides to every heterogeneous system, optimizing
+for heterogeneous systems is inherently an exercise in managing complexity,
+balanced trade-offs and layering.  Efforts to make the hardware simple may
+result in software complexity, unless there's an abstracting software layer
+involved.  Different customer-driven usage models make it challenging to
+offer a layered but consistent programming model, a cost-effective set of
+performance features and a flexibly-capable systems software stack.  And
+often, the very reasons why heterogeneous systems exist drives them to
+change over time, making them difficult to target from a code generation 
+perspective.</p>
+
+<p>As a company that provides hardware systems, compilers, systems software
+infrastructure and services, one of Intel's research and development focuses is
+on optimizing for heterogeneous systems, such as a mix of IA multicores and
+Larrabee processors that are used for both graphics and compute co-processing.
+This talk addresses some of the challenges we've encountered in that space, and
+offers some potential directions.</p> 
+
+<p>Primary among the case studies used in this talk is a dynamic compiler that
+uses Intel's Ct technology, which strives to make it easier for programmers to
+specify what data-parallel work needs to be accomplished, and manages
+extracting parallelism from the application and making use of it on multicore,
+manycore and compute co-processor architectures.  The set of issues that will
+be addressed include how to specify parallelism, safety and debugging, software
+infrastructure and compiler architecture, and achieving performance on
+heterogeneous systems.</p>
+
+<img src="images/newburn.jpg" align=left>
+<p><b>Chris (CJ) Newburn</b> serves as a feature architect for Intel's Intel64
+platforms, and has contributed to a combination of hardware and software
+technologies that span heterogeneous compiler optimizations, middleware,
+JVM/JIT/GC optimization, acceleration hardware, ISA changes, microcode and
+microarchitecture over the last twelve years.  Performance analysis and tuning
+have figured prominently in the development and production readiness work that
+he's done.  He likes to work on projects that span the hardware-software
+boundary, that span organizations, and that foster collaboration across
+organizations.  He has submitted nearly twenty patents and has numerous journal
+and conference publications.  He helped start CGO, has served on several
+program committees, as a journal editor, and as an NSF panelist.  He wrote a
+binary-optimizing, multi-grained parallelizing compiler as part of his Ph.D. at
+Carnegie Mellon University.  Before grad school, in the 80s, he did stints in a
+couple of start-ups, working on a voice recognizer and a VLIW mini-super
+computer.  He's glad to be working on volume products that his Mom uses.</p>
+
+<br><br>
+<hr color=black>
+-->
+
+</div>
+
+
+<div class="menu">
+<a href="index.php.html">Home</a>
+<a class=DONE href="call_papers.php.html">Call for Papers</a>
+<a href="committees.php.html">Committees</a>
+<a href="hotels.php.html">Hotels</a>
+<a href="keynotes.php.html">Keynotes</a>
+<a href="venue.php.html">Local Information</a>
+<a href="gallery.php.html">Photo Gallery</a>
+<a href="program.php.html">Program</a>
+<a href="registration.php.html">Registration</a>
+<a href="social.php.html">Social Event</a>
+<a href="sponsors.php.html">Sponsors</a>
+<a href="posters.php.html">Student Posters</a>
+<a class=DONE href="submissions.php.html">Submission</a>
+<a href="travel.php.html">Travel Information</a>
+<a href="travel_support.php.html">Travel Support</a>
+<a href="tutorials.php.html">Tutorials</a>
+<a href="workshops.php.html">Workshops</a>
+<a href="past.php.html">Past Conferences</a>
+<a target="_blank" href="charter.html">CGO Charter</a>
+</div>
+</div>
+</body>
+</html>
